@@ -19,9 +19,7 @@ fn sqlite_connection_string_is_in_memory() {
 /// Simulate inserting a fee record and asserting it can be retrieved.
 #[test]
 fn sqlite_insert_stores_expected_values() {
-    let mut records: Vec<(u64, &str)> = Vec::new();
-    records.push((100, "hash_abc"));
-    records.push((200, "hash_def"));
+    let records: Vec<(u64, &str)> = vec![(100, "hash_abc"), (200, "hash_def")];
 
     assert_eq!(records.len(), 2);
     assert_eq!(records[0].0, 100);

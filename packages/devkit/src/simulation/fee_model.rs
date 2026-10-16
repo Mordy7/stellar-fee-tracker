@@ -189,7 +189,7 @@ mod tests {
 
     #[test]
     fn different_seeds_diverge() {
-        let mut first_config = config();
+        let first_config = config();
         let mut second_config = config();
         second_config.seed = 43;
         let mut first = FeeModel::new(first_config).expect("model");

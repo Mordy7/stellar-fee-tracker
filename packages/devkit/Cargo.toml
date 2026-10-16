@@ -18,3 +18,34 @@ serde_json = "1"
 
 # CLI
 clap = { version = "4", features = ["derive"] }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["macros", "rt", "time"] }
+proptest = "1"
+wiremock = "0.5"
+reqwest = "0.11"
+criterion = "0.5"
+
+[[bench]]
+name = "analytics_pipeline"
+harness = false
+
+[[bench]]
+name = "percentile_table"
+harness = false
+
+[[bench]]
+name = "rolling_window"
+harness = false
+
+[[bench]]
+name = "spike_classifier"
+harness = false
+
+[[bench]]
+name = "sqlite_insert"
+harness = false
+
+[[bench]]
+name = "sqlite_query"
+harness = false
